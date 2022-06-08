@@ -1,0 +1,36 @@
+ *{
+  box-sizing: border-box;
+ }
+  
+ body {
+   display: grid;
+   place-items: center;
+   min-height: 100vh;
+ }
+ 
+ :root {
+   --magnifier: 6;
+   --gap: 1vmin;
+   --transition: 0.5s;
+ }
+   
+ .container {
+   width: 80vw;
+   height: 30vmin;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: var(--gap);
+ }
+ 
+ img {
+   transition: flex var(--transition), filter var(--transition);
+   height: 100%;
+   object-fit: cover;
+   overflow: hidden;
+   flex: 1;
+ }
+ 
+ img:hover {
+   flex: var(--magnifier);
+ }
